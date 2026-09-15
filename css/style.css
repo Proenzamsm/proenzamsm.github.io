@@ -1,913 +1,885 @@
 
-<!DOCTYPE html>
-<html lang="pt-PT">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-    content="Proeza Associação Melhora a Saúde Mental — Projeto Erasmus+ de Educação de Adultos.">
-
-  <title>Proeza Melhora a Saúde Mental</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-  <!-- =====================================================
-       CABEÇALHO E LOGÓTIPO
-       ===================================================== -->
-
-  <header class="site-header">
-
-    <div class="container nav-wrap">
-
-      <!--
-        LOGÓTIPO
-
-        Coloca o teu ficheiro em:
-        imagens/logo.png
-
-        Se o nome for diferente, altera o src.
-      -->
-
-      <a class="brand"
-        href="#inicio"
-        aria-label="Proeza Melhora a Saúde Mental - início">
-
-        <img
-          src="imagens/logo.png"
-          alt="Proeza Melhora a Saúde Mental"
-          class="logo-img">
-
-      </a>
-
-
-      <!-- MENU MOBILE -->
-
-      <button
-        class="menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="main-navigation">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-
-      <!-- =================================================
-           MENU PRINCIPAL
-
-           Para acrescentar um menu, copia um dos links.
-
-           Exemplo:
-           <a href="#noticias">Notícias</a>
-
-           O destino deve corresponder ao ID de uma secção.
-           ================================================= -->
-
-      <nav
-        class="main-nav"
-        id="main-navigation"
-        aria-label="Navegação principal">
-
-        <a class="active" href="#inicio">Início</a>
-
-        <a href="#projeto">Sobre o Projeto</a>
-
-        <a href="#objetivos">Objetivos</a>
-
-        <a href="#atividades">O que Fazemos</a>
-
-        <a href="#resultados">Resultados</a>
-
-        <a href="#contactos">Contactos</a>
-
-        <!--
-        EXEMPLO DE NOVO MENU:
-
-        <a href="#noticias">Notícias</a>
-        -->
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-
-    <!-- =====================================================
-         1. PÁGINA INICIAL
-         ===================================================== -->
-
-    <section id="inicio" class="hero">
-
-      <div class="hero-overlay"></div>
-
-      <div class="container hero-content">
-
-        <div class="hero-copy">
-
-          <p class="eyebrow">
-            PROJETO ERASMUS+
-          </p>
-
-          <h1>
-            Proeza Associação<br>
-            Melhora a <span>Saúde Mental</span>
-          </h1>
-
-          <!--
-            ALTERA AQUI A FRASE DE APRESENTAÇÃO
-          -->
-
-          <p class="hero-subtitle">
-            Formação, bem-estar e novas competências
-            para uma vida mais equilibrada.
-          </p>
-
-          <a class="btn btn-primary" href="#projeto">
-            Saber mais <span>→</span>
-          </a>
-
-        </div>
-
-
-        <!-- FRASE DECORATIVA -->
-
-        <div class="hero-message">
-
-          <span>
-            “Juntos por<br>
-            uma mente<br>
-            mais saudável!”
-          </span>
-
-          <b>♡</b>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         2. OBJETIVOS
-         ===================================================== -->
-
-    <section id="objetivos" class="objectives section-soft">
-
-      <div class="container">
-
-        <div class="section-heading centered">
-
-          <p class="eyebrow">
-            O QUE QUEREMOS ALCANÇAR
-          </p>
-
-          <h2>
-            Os nossos objetivos
-          </h2>
-
-        </div>
-
-
-        <div class="cards three">
-
-
-          <!-- OBJETIVO 1 -->
-
-          <article class="objective-card">
-
-            <div class="icon-circle blue">
-              🧠
-            </div>
-
-            <div>
-
-              <span class="number">01</span>
-
-              <h3>
-                Reforçar a saúde mental e a resiliência psicológica
-              </h3>
-
-              <p>
-                Desenvolver estratégias que permitam gerir melhor
-                o stress e enfrentar dificuldades emocionais.
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- OBJETIVO 2 -->
-
-          <article class="objective-card">
-
-            <div class="icon-circle green">
-              ☺
-            </div>
-
-            <div>
-
-              <span class="number">02</span>
-
-              <h3>
-                Melhorar a motivação e a satisfação com a vida
-              </h3>
-
-              <p>
-                Promover atividades que contribuam para o bem-estar,
-                a motivação e uma atitude mais positiva perante a vida.
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- OBJETIVO 3 -->
-
-          <article class="objective-card">
-
-            <div class="icon-circle purple">
-              ⌁
-            </div>
-
-            <div>
-
-              <span class="number">03</span>
-
-              <h3>
-                Promover hábitos digitais saudáveis
-              </h3>
-
-              <p>
-                Sensibilizar para os riscos da utilização excessiva
-                das tecnologias e promover uma utilização mais consciente.
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <!--
-          NOVO OBJETIVO
-
-          Copia um cartão completo para acrescentar outro.
-
-          <article class="objective-card">
-
-            <div class="icon-circle blue">🌱</div>
-
-            <div>
-
-              <span class="number">04</span>
-
-              <h3>Título do novo objetivo</h3>
-
-              <p>Descrição do novo objetivo.</p>
-
-            </div>
-
-          </article>
-          -->
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         3. SOBRE O PROJETO
-
-         É AQUI QUE ESCREVES MAIS INFORMAÇÕES.
-
-         Para acrescentar texto, adiciona novos parágrafos:
-         <p>O teu texto aqui...</p>
-         ===================================================== -->
-
-    <section id="projeto" class="about section">
-
-      <div class="container about-grid">
-
-
-        <!-- TEXTO PRINCIPAL -->
-
-        <div class="about-copy">
-
-          <p class="eyebrow">
-            CONHEÇA O PROJETO
-          </p>
-
-          <h2>
-            Sobre o Projeto
-          </h2>
-
-
-          <!-- TEXTO 1 -->
-
-          <p>
-            O projeto <strong>“Proeza Associação Melhora a Saúde Mental”</strong>
-            é um projeto Erasmus+, financiado pela União Europeia,
-            no âmbito da Ação-Chave 1 – Educação de Adultos (KA122-ADU),
-            promovido pela Associação Cultural Proeza Altruísta,
-            com sede na Região Autónoma da Madeira.
-          </p>
-
-
-          <!-- TEXTO 2 -->
-
-          <p>
-            O projeto nasceu da necessidade de responder aos efeitos
-            psicológicos e sociais que permaneceram após a pandemia,
-            incluindo stress, ansiedade, isolamento social, perda de
-            motivação, diminuição da satisfação com a vida e utilização
-            excessiva das tecnologias digitais.
-          </p>
-
-
-          <!-- =================================================
-               ESCREVE MAIS INFORMAÇÕES AQUI
-
-               Podes acrescentar quantos parágrafos quiseres.
-
-               Exemplo:
-
-          <p>
-            Aqui podes escrever mais informações sobre a origem
-            e o desenvolvimento do projeto.
-          </p>
-
-          <p>
-            Aqui podes explicar quem participa, quais são as
-            entidades parceiras e quais são as atividades.
-          </p>
-
-          <h3>Um novo tema</h3>
-
-          <p>
-            Aqui podes escrever informação adicional.
-          </p>
-
-               ================================================= -->
-
-
-          <a class="btn btn-outline" href="#atividades">
-            Conhecer as atividades <span>→</span>
-          </a>
-
-        </div>
-
-
-
-        <!-- INFORMAÇÕES RESUMIDAS -->
-
-        <aside class="project-info">
-
-          <div class="erasmus-badge">
-
-            <span class="eu-flag">
-              ★
-            </span>
-
-            <div>
-
-              <strong>Erasmus+</strong>
-
-              <small>
-                Enriquecer vidas, alargar horizontes.
-              </small>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="info-row">
-
-            <span>▣</span>
-
-            <div>
-
-              <strong>Ação-Chave</strong>
-
-              <small>
-                Educação de Adultos (KA122-ADU)
-              </small>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="info-row">
-
-            <span>⌘</span>
-
-            <div>
-
-              <strong>Código do projeto</strong>
-
-              <small>
-                2024-2-PT01-KA122-ADU-000290918
-              </small>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="info-row">
-
-            <span>⌂</span>
-
-            <div>
-
-              <strong>Organização beneficiária</strong>
-
-              <small>
-                Associação Cultural Proeza Altruísta – Portugal
-              </small>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="info-row">
-
-            <span>◷</span>
-
-            <div>
-
-              <strong>Duração</strong>
-
-              <small>
-                18 meses · 02/02/2025 a 31/07/2026
-              </small>
-
-            </div>
-
-          </div>
-
-        </aside>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         4. ESTATÍSTICAS
-
-         Confirma as fontes das percentagens antes da publicação.
-         ===================================================== -->
-
-    <section class="stats">
-
-      <div class="container stats-grid">
-
-        <div>
-
-          <strong>58%</strong>
-
-          <span>
-            referiram problemas psicológicos associados à pandemia
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>69%</strong>
-
-          <span>
-            indicaram perda de satisfação com a vida e motivação
-          </span>
-
-        </div>
-
-
-        <div>
-
-          <strong>78%</strong>
-
-          <span>
-            apresentavam problemas relacionados com utilização
-            excessiva das tecnologias
-          </span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         5. ATIVIDADES
-
-         Para acrescentar uma atividade, copia um artigo.
-         ===================================================== -->
-
-    <section id="atividades" class="section activities">
-
-      <div class="container">
-
-        <div class="section-heading centered">
-
-          <p class="eyebrow">
-            APRENDER · PARTILHAR · TRANSFORMAR
-          </p>
-
-          <h2>
-            O que fazemos
-          </h2>
-
-          <p>
-            O projeto inclui atividades de formação e aprendizagem
-            para adultos, organizadas em dois programas de formação
-            de sete dias.
-          </p>
-
-        </div>
-
-
-
-        <div class="topic-grid">
-
-
-          <article>
-            <span>🧘</span>
-            <h3>Mindfulness</h3>
-            <p>Mindfulness e meditação.</p>
-          </article>
-
-
-          <article>
-            <span>💚</span>
-            <h3>Bem-estar</h3>
-            <p>Saúde mental e bem-estar psicológico.</p>
-          </article>
-
-
-          <article>
-            <span>🌱</span>
-            <h3>Resiliência</h3>
-            <p>Gestão do stress e desenvolvimento pessoal.</p>
-          </article>
-
-
-          <article>
-            <span>🎨</span>
-            <h3>Expressão</h3>
-            <p>Arte e expressão emocional.</p>
-          </article>
-
-
-          <article>
-            <span>🎵</span>
-            <h3>Música</h3>
-            <p>Música e bem-estar.</p>
-          </article>
-
-
-          <article>
-            <span>📱</span>
-            <h3>Vida digital</h3>
-            <p>Hábitos digitais saudáveis e gestão do tempo de ecrã.</p>
-          </article>
-
-
-          <article>
-            <span>🤝</span>
-            <h3>Inclusão</h3>
-            <p>Participação social e comunitária.</p>
-          </article>
-
-
-          <article>
-            <span>🎯</span>
-            <h3>Motivação</h3>
-            <p>Definição de objetivos e pensamento positivo.</p>
-          </article>
-
-
-
-          <!--
-          NOVA ATIVIDADE
-
-          <article>
-            <span>📚</span>
-            <h3>Nome da atividade</h3>
-            <p>Descrição da nova atividade.</p>
-          </article>
-          -->
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         6. RESULTADOS
-         ===================================================== -->
-
-    <section id="resultados" class="results section-soft">
-
-      <div class="container results-grid">
-
-
-        <div>
-
-          <p class="eyebrow">
-            RESULTADOS ESPERADOS
-          </p>
-
-          <h2>
-            Mais competências para uma vida mais equilibrada.
-          </h2>
-
-          <p>
-            Com este projeto pretendemos que os participantes desenvolvam
-            estratégias eficazes de gestão do stress e das emoções,
-            aumentem a resiliência e adotem hábitos digitais mais conscientes.
-          </p>
-
-
-          <!-- PODES ACRESCENTAR MAIS TEXTO AQUI -->
-
-        </div>
-
-
-
-        <div class="results-list">
-
-          <div>
-            ✓ Maior bem-estar e resiliência psicológica
-          </div>
-
-          <div>
-            ✓ Mais motivação e satisfação com a vida
-          </div>
-
-          <div>
-            ✓ Utilização mais consciente da tecnologia
-          </div>
-
-          <div>
-            ✓ Reforço das competências pessoais e sociais
-          </div>
-
-          <div>
-            ✓ Maior participação social, cultural e comunitária
-          </div>
-
-          <div>
-            ✓ Partilha de conhecimentos com a comunidade
-          </div>
-
-
-          <!--
-          NOVO RESULTADO:
-
-          <div>
-            ✓ Escreve aqui outro resultado
-          </div>
-          -->
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         7. ÁREAS DO PROJETO
-         ===================================================== -->
-
-    <section class="quick-links section">
-
-      <div class="container">
-
-        <div class="section-heading centered">
-
-          <p class="eyebrow">
-            PARTICIPE E ACOMPANHE
-          </p>
-
-          <h2>
-            Áreas do projeto
-          </h2>
-
-        </div>
-
-
-
-        <div class="quick-grid">
-
-
-          <!--
-          Quando criares uma página, substitui href="#"
-          pelo endereço dessa página.
-
-          Exemplo:
-          href="noticias.html"
-          -->
-
-
-          <a href="#" class="quick-card">
-
-            <span>📝</span>
-
-            <strong>Candidaturas</strong>
-
-            <small>
-              Informação e participação
-            </small>
-
-          </a>
-
-
-
-          <a href="#" class="quick-card">
-
-            <span>✈️</span>
-
-            <strong>Mobilidades</strong>
-
-            <small>
-              Formação e experiências Erasmus+
-            </small>
-
-          </a>
-
-
-
-          <a href="#" class="quick-card">
-
-            <span>📢</span>
-
-            <strong>Disseminação</strong>
-
-            <small>
-              Resultados e partilha
-            </small>
-
-          </a>
-
-
-
-          <a href="#contactos" class="quick-card">
-
-            <span>✉️</span>
-
-            <strong>Contactos</strong>
-
-            <small>
-              Fale connosco
-            </small>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         8. CONTACTOS
-         ===================================================== -->
-
-    <section id="contactos" class="contact section-dark">
-
-      <div class="container contact-grid">
-
-
-        <div>
-
-          <p class="eyebrow light">
-            PROEZA ASSOCIAÇÃO ALTRUÍSTA
-          </p>
-
-          <h2>
-            Juntos por uma comunidade mais saudável.
-          </h2>
-
-          <p>
-            Projeto Erasmus+ de Educação de Adultos promovido pela
-            Associação Cultural Proeza Altruísta.
-          </p>
-
-        </div>
-
-
-
-        <div class="contact-box">
-
-          <strong>
-            Proeza Melhora a Saúde Mental
-          </strong>
-
-          <span>
-            Projeto: 2024-2-PT01-KA122-ADU-000290918
-          </span>
-
-          <span>
-            Região Autónoma da Madeira · Portugal
-          </span>
-
-
-          <!--
-          SUBSTITUI PELO EMAIL REAL DA ASSOCIAÇÃO
-          -->
-
-          <a href="mailto:proeza@example.com">
-            Contactar
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- =====================================================
-       RODAPÉ
-       ===================================================== -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-wrap">
-
-      <span>
-        © <span id="year"></span>
-        Proeza Associação Melhora a Saúde Mental
-      </span>
-
-      <span>
-        Erasmus+ · Educação de Adultos
-      </span>
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- JAVASCRIPT -->
-
-  <script src="js/script.js"></script>
-
-</body>
-
-</html>
+/* =========================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #0b477e;
+  --blue2: #1696d2;
+  --green: #42a84a;
+  --purple: #8d78b9;
+  --soft: #eef9fc;
+  --text: #24415d;
+  --muted: #60758a;
+  --white: #fff;
+  --dark: #07345d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 18px rgba(0, 40, 80, 0.08);
+}
+
+.nav-wrap {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+
+/* LOGÓTIPO EM IMAGEM */
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 230px;
+  height: auto;
+  max-height: 75px;
+  display: block;
+  object-fit: contain;
+}
+
+
+/* NAVEGAÇÃO */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.main-nav a {
+  padding: 31px 0 27px;
+  border-bottom: 3px solid transparent;
+  color: #254e70;
+  transition: 0.25s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #0876bd;
+  border-color: #f0c83e;
+}
+
+
+/* BOTÃO DO MENU MOBILE */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 27px;
+  height: 3px;
+  background: var(--blue);
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f0c83e;
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   HERO / PÁGINA INICIAL
+   ========================================================= */
+
+.hero {
+  min-height: 455px;
+  position: relative;
+  background: linear-gradient(
+    105deg,
+    #dff5ff 0%,
+    #c7eafa 46%,
+    #8ec9dd 100%
+  );
+  overflow: hidden;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  right: -5%;
+  bottom: -45%;
+  width: 65%;
+  height: 90%;
+  background: linear-gradient(
+    145deg,
+    #70b89b,
+    #237a79 60%,
+    #0b5078
+  );
+  border-radius: 50% 50% 0 0;
+  opacity: 0.72;
+  transform: rotate(-7deg);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(255, 255, 255, 0.75),
+      transparent 35%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 455px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-copy {
+  max-width: 690px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #1588c9;
+  margin-bottom: 9px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.06;
+  color: var(--blue);
+  letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero-subtitle {
+  font-size: 19px;
+  max-width: 570px;
+  margin: 20px 0 28px;
+  color: #24557d;
+  font-weight: 600;
+}
+
+.hero-message {
+  font-family: cursive;
+  color: #075083;
+  font-size: 25px;
+  line-height: 1.2;
+  text-align: center;
+  transform: rotate(-4deg);
+  margin-right: 30px;
+}
+
+.hero-message b {
+  display: block;
+  color: #15966a;
+  font-size: 40px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 30px;
+  padding: 12px 23px;
+  font-weight: 800;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.btn span {
+  font-size: 21px;
+}
+
+.btn-primary {
+  background: #50b84d;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(50, 160, 70, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #3ca341;
+}
+
+.btn-outline {
+  border: 2px solid #168bd1;
+  color: #0877bd;
+  margin-top: 15px;
+}
+
+.btn-outline:hover {
+  background: #168bd1;
+  color: #fff;
+}
+
+
+/* =========================================================
+   SECÇÕES GERAIS
+   ========================================================= */
+
+.section {
+  padding: 80px 0;
+}
+
+.section-soft {
+  padding: 72px 0;
+  background: linear-gradient(
+    180deg,
+    #effaff,
+    #f8fcff
+  );
+}
+
+.section-heading {
+  margin-bottom: 42px;
+}
+
+.section-heading.centered {
+  text-align: center;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading h2,
+.about h2,
+.results h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.1;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   OBJETIVOS
+   ========================================================= */
+
+.cards.three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.objective-card {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 18px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 27px;
+  box-shadow: 0 8px 30px rgba(0, 65, 100, 0.08);
+  transition: 0.25s;
+}
+
+.objective-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 65, 100, 0.12);
+}
+
+.icon-circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.icon-circle.blue {
+  background: #48a9dd;
+}
+
+.icon-circle.green {
+  background: #66b84d;
+}
+
+.icon-circle.purple {
+  background: #9b86c1;
+}
+
+.number {
+  font-size: 13px;
+  color: #1588c9;
+  font-weight: 900;
+}
+
+.objective-card h3 {
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--blue);
+  margin: 3px 0 10px;
+}
+
+.objective-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   SOBRE O PROJETO
+   ========================================================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-copy p {
+  margin-bottom: 15px;
+  color: #50677b;
+}
+
+.about-copy h3 {
+  color: var(--blue);
+  margin: 25px 0 10px;
+  font-size: 24px;
+}
+
+.project-info {
+  background: #eef8fd;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 70, 100, 0.07);
+}
+
+.erasmus-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #c9e1ed;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+}
+
+.eu-flag {
+  width: 62px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: #1554a0;
+  color: #ffd83d;
+  font-size: 24px;
+}
+
+.erasmus-badge strong {
+  display: block;
+  font-size: 24px;
+  color: #155b99;
+}
+
+.erasmus-badge small {
+  display: block;
+  color: #527087;
+}
+
+.info-row {
+  display: flex;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #d7e8ef;
+}
+
+.info-row:last-child {
+  border-bottom: 0;
+}
+
+.info-row > span {
+  font-size: 22px;
+  color: #1787c6;
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.info-row strong,
+.info-row small {
+  display: block;
+}
+
+.info-row strong {
+  font-size: 14px;
+  color: #174c75;
+}
+
+.info-row small {
+  font-size: 13px;
+  color: #5d7180;
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ESTATÍSTICAS
+   ========================================================= */
+
+.stats {
+  background: linear-gradient(
+    90deg,
+    #0a78b8,
+    #187eab
+  );
+  color: #fff;
+  padding: 34px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  text-align: center;
+}
+
+.stats strong {
+  display: block;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.stats span {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.94;
+}
+
+
+/* =========================================================
+   ATIVIDADES
+   ========================================================= */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.topic-grid article {
+  border: 1px solid #e0edf2;
+  border-radius: 17px;
+  padding: 25px 20px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 60, 100, 0.05);
+  transition: 0.25s;
+}
+
+.topic-grid article:hover {
+  transform: translateY(-4px);
+  border-color: #9fd4e8;
+}
+
+.topic-grid span {
+  font-size: 32px;
+}
+
+.topic-grid h3 {
+  color: var(--blue);
+  margin: 9px 0 4px;
+}
+
+.topic-grid p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   RESULTADOS
+   ========================================================= */
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.results-grid > div:first-child p {
+  color: #50677b;
+}
+
+.results-list {
+  display: grid;
+  gap: 12px;
+}
+
+.results-list div {
+  background: #fff;
+  border-radius: 12px;
+  padding: 13px 17px;
+  color: #31576f;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 60, 100, 0.05);
+}
+
+
+/* =========================================================
+   ÁREAS DO PROJETO
+   ========================================================= */
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.quick-card {
+  padding: 28px 20px;
+  border-radius: 18px;
+  background: #f4fbfe;
+  border: 1px solid #d9edf5;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.quick-card:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0, 60, 100, 0.08);
+}
+
+.quick-card span {
+  display: block;
+  font-size: 32px;
+}
+
+.quick-card strong {
+  display: block;
+  color: var(--blue);
+  font-size: 18px;
+  margin: 7px 0 3px;
+}
+
+.quick-card small {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   CONTACTOS
+   ========================================================= */
+
+.section-dark {
+  background: #063a63;
+  color: #fff;
+  padding: 65px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.contact h2 {
+  font-size: clamp(31px, 4vw, 45px);
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  opacity: 0.88;
+}
+
+.eyebrow.light {
+  color: #75c9ee;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 25px;
+  display: grid;
+  gap: 7px;
+}
+
+.contact-box strong {
+  font-size: 20px;
+}
+
+.contact-box span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.contact-box a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #55b84d;
+  color: #fff;
+  border-radius: 25px;
+  padding: 9px 18px;
+  width: max-content;
+  font-weight: 800;
+}
+
+.contact-box a:hover {
+  background: #3ca341;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.site-footer {
+  background: #042d4e;
+  color: #c7dbe8;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .main-nav {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .logo-img {
+    width: 200px;
+  }
+
+  .hero-message {
+    display: none;
+  }
+
+  .cards.three {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   TELEMÓVEIS
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .nav-wrap {
+    min-height: 74px;
+  }
+
+  .logo-img {
+    width: 180px;
+    max-height: 62px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 6%;
+    box-shadow: 0 12px 20px rgba(0, 50, 80, 0.1);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 12px 0;
+    border-bottom: 1px solid #eaf1f5;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-content {
+    min-height: 520px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 17px;
+  }
+
+  .about-grid,
+  .results-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+}
+
+
+/* =========================================================
+   TELEMÓVEIS PEQUENOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .logo-img {
+    width: 165px;
+  }
+
+  .topic-grid,
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .objective-card {
+    grid-template-columns: 65px 1fr;
+    padding: 20px;
+  }
+
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+}
