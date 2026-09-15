@@ -1,0 +1,10 @@
+const d=PAGE_DATA; document.getElementById("page-content").innerHTML=`<section class="page-intro"><div class="container"><p class="eyebrow">${d.eyebrow}</p><h1>${d.heading}</h1><p>${d.intro}</p></div></section><section class="stats"><div class="container stats-grid">${d.stats.map(x=>{let [a,b]=x.split('|');return `<div><strong>${a}</strong><span>${b}</span></div>`}).join("")}</div></section><section class="section-soft"><div class="container results-grid"><div><h2>Resultados esperados</h2><p>${d.text}</p></div><div class="results-list">${d.results.map(x=>`<div>✓ ${x}</div>`).join("")}</div></div></section>`;\nexport function render(container, data) {
+  container.innerHTML = "";
+  const title = document.createElement("h1");
+  title.textContent = data.title || data.titulo || "Resultados";
+  container.appendChild(title);
+  const body = document.createElement("div");
+  body.className = "page-data";
+  body.textContent = data.content || data.conteudo || data.text || "";
+  container.appendChild(body);
+}\n
