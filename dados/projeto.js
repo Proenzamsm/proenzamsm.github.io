@@ -4,7 +4,7 @@ window.PAGE_DATA = {
   intro: "O enquadramento, a missão e as informações principais do projeto Erasmus+.",
   paragraphs: [
     "O projeto <strong>“Proenza Associação Melhora a Saúde Mental”</strong> é um projeto Erasmus+, financiado pela União Europeia, no âmbito da Ação-Chave 1 – Educação de Adultos (KA122-ADU), promovido pela Associação Cultural Proeza Altruísta, com sede na Região Autónoma da Madeira.",
-    "O projeto nasceu da necessidade de responder aos efeitos psicológicos e sociais que permaneceram após a pandemia, incluindo stress, ansiedade, isolamento social, perda de motivação, diminuição da satisfação com a vida e utilização excessiva das tecnologias digitais."
+    "OOOOO projeto nasceu da necessidade de responder aos efeitos psicológicos e sociais que permaneceram após a pandemia, incluindo stress, ansiedade, isolamento social, perda de motivação, diminuição da satisfação com a vida e utilização excessiva das tecnologias digitais."
   ],
   info: [
     "Ação-Chave|Educação de Adultos (KA122-ADU)",
