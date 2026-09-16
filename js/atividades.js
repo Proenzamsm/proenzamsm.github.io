@@ -1,1 +1,1 @@
-const d=PAGE_DATA; document.getElementById("page-content").innerHTML=`<section class="page-intro"><div class="container"><p class="eyebrow">${d.eyebrow}</p><h1>${d.heading}</h1><p>${d.intro}</p></div></section><section class="section"><div class="container"><div class="topic-grid">${d.items.map(x=>`<article><span>${x.icon}</span><h3>${x.title}</h3><p>${x.text}</p></article>`).join("")}</div></div></section>`;
+
