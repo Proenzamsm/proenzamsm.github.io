@@ -9,11 +9,11 @@ window.PAGE_DATA = {
       location: "Local da mobilidade",
       description: "Descrição da mobilidade, das atividades realizadas e da experiência dos participantes.",
       images: [
-        "css/imagens/mobilidades/mobilidade-01-01.jpg",
-        "css/imagens/mobilidades/mobilidade-01-02.jpg",
-        "css/imagens/mobilidades/mobilidade-01-03.jpg",
-        "css/imagens/mobilidades/mobilidade-01-04.jpg",
-        "css/imagens/mobilidades/mobilidade-01-05.jpg"
+        "css/imagens/logo.png",
+        "css/imagens/logo.png",
+        "css/imagens/logo.png",
+        "css/imagens/logo.png",
+        "css/imagens/logo.png"
       ]
     },
 
