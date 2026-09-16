@@ -2,7 +2,8 @@ const nav = document.getElementById("main-nav");
 
 if (nav && window.MENU) {
 
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentPage =
+    window.location.pathname.split("/").pop() || "index.html";
 
   nav.innerHTML = MENU.map(item => {
 
@@ -16,14 +17,20 @@ if (nav && window.MENU) {
       return `
         <div class="has-submenu">
 
-          <button
-            class="submenu-toggle ${submenuActive ? "active" : ""}"
-            type="button"
-            aria-expanded="false"
-          >
-            <span>${item.label}</span>
-            <span class="submenu-arrow">▾</span>
-          </button>
+          <div class="submenu-main">
+            <span class="submenu-label ${submenuActive ? "active" : ""}">
+              ${item.label}
+            </span>
+
+            <button
+              class="submenu-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-label="Abrir submenu ${item.label}"
+            >
+              <span class="submenu-arrow">▾</span>
+            </button>
+          </div>
 
           <div class="submenu">
 
@@ -42,7 +49,7 @@ if (nav && window.MENU) {
       `;
     }
 
-    // Item normal do menu
+    // Item normal
     return `
       <a
         href="${item.href}"
@@ -54,6 +61,48 @@ if (nav && window.MENU) {
 
   }).join("");
 }
+
+
+// Abrir / fechar o submenu apenas ao clicar na seta
+document.querySelectorAll(".submenu-toggle").forEach(button => {
+
+  button.addEventListener("click", event => {
+
+    event.stopPropagation();
+
+    const parent = button.closest(".has-submenu");
+    const isOpen = parent.classList.toggle("submenu-open");
+
+    button.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+  });
+
+});
+
+
+// Fechar submenu quando se clica fora
+document.addEventListener("click", event => {
+
+  document.querySelectorAll(".has-submenu").forEach(parent => {
+
+    if (!parent.contains(event.target)) {
+
+      parent.classList.remove("submenu-open");
+
+      const button = parent.querySelector(".submenu-toggle");
+
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+      }
+
+    }
+
+  });
+
+});
 
 
 // Menu mobile
@@ -95,7 +144,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     link.addEventListener("click", event => {
 
-      if (event.ctrlKey || event.shiftKey || event.metaKey || event.altKey) {
+      if (
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.metaKey ||
+        event.altKey
+      ) {
         return;
       }
 
