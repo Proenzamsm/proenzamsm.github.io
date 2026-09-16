@@ -1,47 +1,68 @@
 window.PAGE_DATA = {
-  eyebrow: "APRENDER · PARTILHAR · TRANSFORMAR",
-  heading: "O que fazemos",
-  intro: "O projeto inclui atividades de formação e aprendizagem para adultos, organizadas em dois programas de formação de sete dias.",
-  items: [
+  eyebrow: "GALERIA",
+  heading: "Momentos do projeto",
+  intro: "Imagens das atividades, formações e momentos de partilha do projeto Erasmus+.",
+  images: [
     {
-      icon: "🧘",
-      title: "Mindfulness",
-      text: "Mindfulness e meditação."
+      src: "css/imagens/logo.png",
+      alt: "Atividade de formação do projeto"
     },
     {
-      icon: "💚",
-      title: "Bem-estar",
-      text: "Saúde mental e bem-estar psicológico."
+      src: "css/imagens/logo.png",
+      alt: "Momento de aprendizagem e partilha"
     },
     {
-      icon: "🌱",
-      title: "Resiliência",
-      text: "Gestão do stress e desenvolvimento pessoal."
+      src: "css/imagens/logo.png",
+      alt: "Participantes numa atividade do projeto"
     },
     {
-      icon: "🎨",
-      title: "Expressão",
-      text: "Arte e expressão emocional."
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+        {
+      src: "css/imagens/logo.png",
+      alt: "Momento de convívio entre participantes"
+    },
+    
+    {
+      src: "css/imagens/galeria-05.jpg",
+      alt: "Atividade relacionada com o bem-estar"
     },
     {
-      icon: "🎵",
-      title: "Música",
-      text: "Música e bem-estar."
-    },
-    {
-      icon: "📱",
-      title: "Vida digital",
-      text: "Hábitos digitais saudáveis e gestão do tempo de ecrã."
-    },
-    {
-      icon: "🤝",
-      title: "Inclusão",
-      text: "Participação social e comunitária."
-    },
-    {
-      icon: "🎯",
-      title: "Motivação",
-      text: "Definição de objetivos e pensamento positivo."
+      src: "css/imagens/galeria-06.jpg",
+      alt: "Momento de formação Erasmus+"
     }
   ]
 };
