@@ -1,6 +1,6 @@
 window.PAGE_DATA = {
   eyebrow: "MOBILIDADES · ERASMUS+",
-  heading: "As nossas mobilidades",
+  heading: "Todas as mobilidades",
   intro: "Conheça as experiências de aprendizagem, formação e partilha realizadas no âmbito do projeto Erasmus+.",
 
   mobilities: [
