@@ -4,6 +4,6 @@ window.SITE_MENU = [
   { label: "Objetivos", href: "objetivos.html" },
   { label: "O que Fazemos", href: "atividades.html" },
   { label: "Resultados", href: "resultados.html" },
-   { label: "Mobilidades", href: "resultados.html" },
+   { label: "Mobilidades", href: "mobilidades.html" },
   { label: "Contactos", href: "contactos.html" }
 ];
