@@ -14,21 +14,32 @@ const PAGE_FILES = {
   "contactos.html": "contactos"
 };
 
+
 function currentFile() {
   return window.location.pathname.split("/").pop() || "index.html";
 }
 
-function renderMenu() {
+
+/*
+  Desenha o menu.
+  Pode receber diretamente o ficheiro da página atual,
+  evitando qualquer atraso na barra laranja.
+*/
+
+function renderMenu(activePage = currentFile()) {
+
   if (!mainNav || !window.MENU) return;
 
-  const current = currentFile();
-
   mainNav.innerHTML = window.MENU.map(item => {
+
+    /*
+      Item com submenu
+    */
 
     if (item.submenu) {
 
       const submenuActive = item.submenu.some(
-        sub => sub.href === current
+        sub => sub.href === activePage
       );
 
       return `
@@ -56,7 +67,7 @@ function renderMenu() {
             ${item.submenu.map(sub => `
               <a
                 href="${sub.href}"
-                class="${sub.href === current ? "active" : ""}"
+                class="${sub.href === activePage ? "active" : ""}"
               >
                 ${sub.label}
               </a>
@@ -68,10 +79,15 @@ function renderMenu() {
       `;
     }
 
+
+    /*
+      Item normal
+    */
+
     return `
       <a
         href="${item.href}"
-        class="${item.href === current ? "active" : ""}"
+        class="${item.href === activePage ? "active" : ""}"
       >
         ${item.label}
       </a>
@@ -80,6 +96,10 @@ function renderMenu() {
   }).join("");
 }
 
+
+/*
+  Fecha o menu mobile e os submenus.
+*/
 
 function closeMenus() {
 
@@ -96,31 +116,46 @@ function closeMenus() {
 
     item
       .querySelector(".submenu-toggle")
-      ?.setAttribute("aria-expanded", "false");
+      ?.setAttribute(
+        "aria-expanded",
+        "false"
+      );
 
   });
 
 }
 
 
+/*
+  Carrega os dados e o JavaScript
+  correspondente à página.
+*/
+
 function runPageScript(page) {
 
   const base = PAGE_FILES[page];
 
   if (!base) {
+
     return Promise.reject(
-      new Error("Página não encontrada: " + page)
+      new Error(
+        "Página não encontrada: " + page
+      )
     );
+
   }
+
 
   return Promise.all([
 
     fetch(`dados/${base}.js`).then(r => {
 
       if (!r.ok) {
+
         throw new Error(
           `Não foi possível carregar dados/${base}.js`
         );
+
       }
 
       return r.text();
@@ -130,9 +165,11 @@ function runPageScript(page) {
     fetch(`js/${base}.js`).then(r => {
 
       if (!r.ok) {
+
         throw new Error(
           `Não foi possível carregar js/${base}.js`
         );
+
       }
 
       return r.text();
@@ -149,32 +186,48 @@ function runPageScript(page) {
 
     document.body.dataset.page = base;
 
-    renderMenu();
-
-    closeMenus();
+    /*
+      IMPORTANTE:
+      Não desenhamos o menu aqui.
+      O menu será atualizado depois,
+      já sabendo exatamente qual é a página ativa.
+    */
 
   });
 
 }
 
 
-async function navigateTo(href, addHistory = true) {
+/*
+  Navegação entre páginas.
+*/
+
+async function navigateTo(
+  href,
+  addHistory = true
+) {
 
   const url = new URL(
     href,
     window.location.href
   );
 
-  if (url.origin !== window.location.origin) {
+  if (
+    url.origin !== window.location.origin
+  ) {
     return;
   }
 
+
   const file =
-    url.pathname.split("/").pop() || "index.html";
+    url.pathname.split("/").pop()
+    || "index.html";
+
 
   if (!PAGE_FILES[file]) {
     return;
   }
+
 
   if (
     file === currentFile() &&
@@ -183,37 +236,67 @@ async function navigateTo(href, addHistory = true) {
     return;
   }
 
+
   closeMenus();
+
+
+  /*
+    Animação de saída
+  */
 
   pageContent?.classList.add(
     "page-content-leave"
   );
 
+
   await new Promise(resolve =>
     setTimeout(resolve, 220)
   );
 
+
   try {
+
+    /*
+      Carrega primeiro o conteúdo da página.
+    */
 
     await runPageScript(file);
 
+
     /*
-      Atualiza primeiro o endereço da página
-      e depois volta a desenhar o menu.
-      Desta forma, a página ativa fica correta,
-      incluindo as páginas dentro do submenu "Mais".
+      Atualiza o endereço.
     */
 
     if (addHistory) {
 
       history.pushState(
-        {page: file},
+        { page: file },
         "",
         file
       );
 
-      renderMenu();
     }
+
+
+    /*
+      AGORA sabemos exatamente qual é a página ativa.
+      Não dependemos de currentFile().
+    */
+
+    renderMenu(file);
+
+
+    /*
+      Fecha menus depois de reconstruir
+      a navegação.
+    */
+
+    closeMenus();
+
+
+    /*
+      Animação de entrada
+    */
 
     pageContent?.classList.remove(
       "page-content-leave"
@@ -222,6 +305,7 @@ async function navigateTo(href, addHistory = true) {
     pageContent?.classList.add(
       "page-content-enter"
     );
+
 
     requestAnimationFrame(() => {
 
@@ -235,10 +319,16 @@ async function navigateTo(href, addHistory = true) {
 
     });
 
+
+    /*
+      Voltar ao topo.
+    */
+
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
+
 
   } catch (error) {
 
@@ -251,8 +341,16 @@ async function navigateTo(href, addHistory = true) {
 }
 
 
-renderMenu();
+/*
+  Primeiro carregamento da página.
+*/
 
+renderMenu(currentFile());
+
+
+/*
+  Menu mobile.
+*/
 
 if (menuToggle && mainNav) {
 
@@ -276,47 +374,61 @@ if (menuToggle && mainNav) {
 }
 
 
+/*
+  Cliques no menu e nos submenus.
+*/
+
 document.addEventListener(
   "click",
   event => {
 
     /*
-      Abrir / fechar o submenu apenas
-      quando se clica na seta.
+      Abrir / fechar submenu
+      apenas através da seta.
     */
 
     const toggle =
-      event.target.closest(".submenu-toggle");
+      event.target.closest(
+        ".submenu-toggle"
+      );
+
 
     if (toggle) {
 
       event.stopPropagation();
 
       const parent =
-        toggle.closest(".has-submenu");
+        toggle.closest(
+          ".has-submenu"
+        );
+
 
       const open =
         parent.classList.toggle(
           "submenu-open"
         );
 
+
       toggle.setAttribute(
         "aria-expanded",
         String(open)
       );
 
+
       return;
+
     }
 
 
     /*
-      Navegação entre páginas.
+      Clique num link de página.
     */
 
     const link =
       event.target.closest(
         'a[href$=".html"]'
       );
+
 
     if (link) {
 
@@ -326,9 +438,11 @@ document.addEventListener(
           window.location.href
         );
 
+
       const file =
         url.pathname.split("/").pop()
         || "index.html";
+
 
       if (
         url.origin === window.location.origin &&
@@ -347,13 +461,15 @@ document.addEventListener(
         );
 
         return;
+
       }
+
     }
 
 
     /*
-      Fechar submenu quando se clica
-      fora dele.
+      Clique fora do submenu:
+      fecha-o.
     */
 
     if (
@@ -372,6 +488,7 @@ document.addEventListener(
             "submenu-open"
           );
 
+
           item
             .querySelector(
               ".submenu-toggle"
@@ -389,40 +506,96 @@ document.addEventListener(
 );
 
 
+/*
+  Botões Voltar / Avançar do navegador.
+*/
+
 window.addEventListener(
   "popstate",
-  () => {
+  async () => {
 
-    navigateTo(
-      currentFile(),
-      false
-    );
+    const file = currentFile();
+
+    if (!PAGE_FILES[file]) {
+      return;
+    }
+
+    try {
+
+      await runPageScript(file);
+
+      /*
+        No popstate o endereço já foi alterado
+        pelo navegador, portanto usamos diretamente
+        o ficheiro atual.
+      */
+
+      renderMenu(file);
+
+      closeMenus();
+
+      pageContent?.classList.remove(
+        "page-content-leave"
+      );
+
+      pageContent?.classList.add(
+        "page-content-enter"
+      );
+
+      requestAnimationFrame(() => {
+
+        requestAnimationFrame(() => {
+
+          pageContent?.classList.remove(
+            "page-content-enter"
+          );
+
+        });
+
+      });
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    } catch (error) {
+
+      console.error(error);
+
+      window.location.reload();
+
+    }
 
   }
 );
 
 
+/*
+  Ano do footer.
+*/
+
 const year =
   document.getElementById("year");
 
 if (year) {
+
   year.textContent =
     new Date().getFullYear();
+
 }
 
 
-// As páginas têm os seus próprios
-// ficheiros de dados/renderização para garantir
-// que o conteúdo original aparece mesmo
-// no carregamento inicial.
-// A navegação dinâmica só é usada
-// depois do carregamento da página.
+/*
+  Garantir que o menu fica correto
+  depois do carregamento inicial.
+*/
 
 window.addEventListener(
   "load",
   () => {
 
-    renderMenu();
+    renderMenu(currentFile());
 
     closeMenus();
 
@@ -430,8 +603,10 @@ window.addEventListener(
       document.getElementById("year");
 
     if (year) {
+
       year.textContent =
         new Date().getFullYear();
+
     }
 
   }
