@@ -1,0 +1,1 @@
+window.PAGE_DATA = { eyebrow:"FALE CONNOSCO", heading:"Contactos", intro:"Estamos disponíveis para partilhar informação sobre o projeto e as suas atividades.", project:"Proeza Melhora a Saúde Mental", code:"2024-2-PT01-KA122-ADU-000290918", location:"Região Autónoma da Madeira · Portugal", email:"proeza@example.com" };
